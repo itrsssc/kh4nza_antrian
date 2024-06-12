@@ -576,6 +576,9 @@ public final class KeuanganPenagihanPiutangPasien extends javax.swing.JDialog {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 NoPenagihanKeyPressed(evt);
             }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                NoPenagihanKeyTyped(evt);
+            }
         });
         panelisi4.add(NoPenagihan);
         NoPenagihan.setBounds(96, 10, 226, 23);
@@ -1517,6 +1520,10 @@ private void MnDetailPiutangActionPerformed(java.awt.event.ActionEvent evt) {//G
         }
         this.setCursor(Cursor.getDefaultCursor());
     }//GEN-LAST:event_ppBersihkanActionPerformed
+
+    private void NoPenagihanKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_NoPenagihanKeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_NoPenagihanKeyTyped
 
     /**
     * @param args the command line arguments
