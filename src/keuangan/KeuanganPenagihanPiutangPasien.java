@@ -2098,11 +2098,17 @@ private void MnDetailPiutangActionPerformed(java.awt.event.ActionEvent evt) {//G
     }
     
     private void autoNomor() {
-//        Valid.autoNomer3()
-        Valid.autoNomer3("select ifnull(MAX(CONVERT(LEFT(penagihan_piutang.no_tagihan,3),signed)),0) from penagihan_piutang where penagihan_piutang.tanggal='"+Valid.SetTgl(Tanggal.getSelectedItem()+"")+ "'","/RSSC-KEU-INV/V/"+Tanggal.getSelectedItem().toString().substring(6,10)+"/",3,NoPenagihan ); 
+        Valid.autoNomer7("select ifnull(max(CONVERT(left(penagihan_piutang.no_tagihan,3),signed)),9999) from penagihan_piutang",
+                "/RSSC-KEU-INV/"+Valid.getCurrentDateWithRomanMonth().split(" ")[1]+"/"+Valid.getCurrentDateWithRomanMonth().split(" ")[2]+"",3,NoPenagihan ); 
     }
 }
 
 //edit
 //               "PP"+Tanggal.getSelectedItem().toString().substring(6,10)+Tanggal.getSelectedItem().toString().substring(3,5)+Tanggal.getSelectedItem().toString().substring(0,2),3,NoPenagihan); 
 //    }
+
+
+// private void autoNomor() {
+//     Valid.autoNomer7("select ifnull(max(CONVERT(left(penagihan_piutang.no_tagihan,3),signed)),9999) from penagihan_piutang",
+//             "/RSSC-KEU-INV/VI/"+Tanggal.getSelectedItem().toString().substring(6,10)+"",3,NoPenagihan ); 
+// }
