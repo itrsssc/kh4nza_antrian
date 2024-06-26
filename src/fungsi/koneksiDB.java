@@ -32,7 +32,7 @@ public class koneksiDB {
                 dataSource.setPassword(EnkripsiAES.decrypt(prop.getProperty("PAS")));
                 connection=dataSource.getConnection();       
                 System.out.println(" \n\n"+
-                        "  === KHANZA TOSCA RSSC === v.240612 \n\n"+
+                        "  === KHANZA TOSCA RSSC === v.240625 (update nomor penagihan piutang) \n\n"+
 //                        "  Koneksi Berhasil. Sorry bro loading, silahkan baca dulu.... \n\n"+
                         "	Software ini adalah Software Menejemen Rumah Sakit/Klinik/\n" +
                         "  Puskesmas yang  gratis dan boleh digunakan siapa saja tanpa dikenai \n" +
